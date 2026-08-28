@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+ @theme {
+  /* Fontes */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  /* Base do site */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Cards */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  /* Contraste */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  /* Tons de Rosa */
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  /* Cores para textos de pouco contraste */
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Cor para botoes e barras de progresso */
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  /* Bordas e interacoes */
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  /* Cor para os cantos */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Base */
+  --background: #16131F;
+  --foreground: #F0D9E4;
+
+  /* Card */
+  --card: #1E1928;
+  --card-foreground: #F0D9E4;
+
+  /* Primary */
+  --primary: #C1A0AC;
+  --primary-foreground: #16131F;
+
+  /* Secondary */
+  --secondary: #806C79;
+  --secondary-foreground: #F0D9E4;
+
+  /* Muted */
+  --muted: #4A3F4B;
+  --muted-foreground: #C1A0AC;
+
+  /* Accent */
+  --accent: #C1A0AC;
+  --accent-foreground: #16131F;
+
+  /* Borders & focus */
+  --border: #4A3F4B;
+  --ring: #C1A0AC;
+
+  /* Radius base */
+  --radius: 0.5rem;
+}
