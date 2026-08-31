@@ -2,9 +2,9 @@
 const navLinks = [
     {name: 'My', to: '/#sobre' },
     {name: 'Skills', to: '/#skills'},
-    {name: 'Experiência', to:'/#experiencia'},
+    {name: 'Experiência', to:'/experiencia'},
+    {name: 'Cursos', to: '/formacao'},
     {name: 'Projetos', to: '/#projetos'},
-    {name: 'Contatos', to: '/#contatos'},
 ]
 </script>
 

@@ -61,13 +61,14 @@ const activeTab = ref<SkillTab>('frontend')
     </div>
   </section>
 
-  <section id="skills" class="px-4 py-24 ">
-    <div class="text-center">
-      <p>O que eu faço</p>
-      <h1 class="text-4xl font-bold">Minhas Skills</h1>
+  <section id="skills" 
+  class="py-20">
+    <div class="text-center text-sm font-serif">
+      <p>O  QUE EU FAÇO</p>
+      <h1 class="text-4xl font-bold mt-5">Minhas Skills</h1>
     </div>
 
-    <div class="flex flex-row justify-center gap-4 mt-10">
+    <div class="flex flex-row justify-center gap-4 mt-10 font-sans">
       <button
         v-for="tab in tabs"
         :key="tab.key"
@@ -81,7 +82,7 @@ const activeTab = ref<SkillTab>('frontend')
         {{ tab.label }}
       </button>
     </div>
-    <div class="grid grid-cols-3 gap-4 mt-10">
+    <div class="grid grid-cols-3 gap-4 mt-10 font-serif">
       <CardSkills
         v-for="skill in skillsData[activeTab]"
         :key="skill.name"
@@ -91,17 +92,33 @@ const activeTab = ref<SkillTab>('frontend')
     </div>
   </section>
 
-  <section id="trajetoria" class="px-80 py-24 min-h-[50vh]">
-    <div class="text-center">
-      <p>Trajetória</p>
-      <h1 class="text-4xl font-bold">Experiência & Educação</h1>
-    </div>
-  </section>
+  
 
-  <section id="projetos">
-    <div class="trabalhos">
-      <p>Trajetória</p>
-      <h1 class="text-4xl font-bold">Experiência & Educação</h1>
+  <section 
+  id="trabalhos">
+    <div class="text-left text-[12px] font-serif ">
+      <h1 class="text-4xl font-bold mt-5">Projetos Pessoais</h1>
+       <p class=" mt-5 max-w-[18ch]"> TRABALHOS EM DESENVOLVIMENTO</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-10 mt-10">
+      <CardProjetos
+        v-for="projeto in projetos"
+        :key="projeto.titulo"
+        :foto="projeto.foto"
+        :tags="projeto.tags"
+        :titulo="projeto.titulo"
+        :conteudo="projeto.conteudo"
+        :link-git="projeto.linkGit"
+      />
     </div>
   </section>
+  <section
+  id="contato" 
+  class="py-30">
+    <div class="text-center text-sm font-serif">
+      <h1 class="text-4xl font-bold mt-5">Minhas Skills</h1>
+    </div>
+  </section>
+  
 </template>
