@@ -95,7 +95,8 @@ const activeTab = ref<SkillTab>('frontend')
   
 
   <section 
-  id="trabalhos">
+  id="trabalhos" 
+  class="mb-30">
     <div class="text-left text-[12px] font-serif ">
       <h1 class="text-4xl font-bold mt-5">Projetos Pessoais</h1>
        <p class=" mt-5 max-w-[18ch]"> TRABALHOS EM DESENVOLVIMENTO</p>
@@ -113,12 +114,13 @@ const activeTab = ref<SkillTab>('frontend')
       />
     </div>
   </section>
+  
   <section
   id="contato" 
-  class="py-30">
-    <div class="text-center text-sm font-serif">
-      <h1 class="text-4xl font-bold mt-5">Minhas Skills</h1>
+  class="py-30 bg-foreground ">
+    <div class="text-center text-sm font-serif ">
+      <h1 class="text-4xl font-bold mt-5 text-primary-foreground">Contatinhos</h1>
     </div>
   </section>
-  
+
 </template>

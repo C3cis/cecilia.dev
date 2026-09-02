@@ -1,9 +1,9 @@
 // Tags permitidas. Se precisar de outra (ex: 'Nuxt'), é só adicionar aqui na união.
-export type Tag = 'Go' | 'Gin' | 'MongoSQL' | 'React' | 'Vue' | 'TS' | 'JS' | 'Bun'
+export type TagProjeto = 'Go' | 'Gin' | 'MongoSQL' | 'React' | 'Vue' | 'TS' | 'JS' | 'Bun'
 
 export type Projeto = {
   foto: string
-  tags: Tag[]
+  tags: TagProjeto[]
   titulo: string
   conteudo: string
   linkGit: string
