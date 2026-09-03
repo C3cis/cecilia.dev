@@ -11,6 +11,21 @@
       </p>
     </div>
 
+    <div class="flex flex-row gap-10 mt-10 font-serif">
+      <div class="flex items-center gap-3">
+        <span class="text-4xl font-bold text-primary">5</span>
+        <p class="text-sm text-muted-foreground leading-tight max-w-[9ch]">Certificados</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-4xl font-bold text-primary">120H+</span>
+        <p class="text-sm text-muted-foreground leading-tight max-w-[9ch]">de Estudos</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-4xl font-bold text-primary">4</span>
+        <p class="text-sm text-muted-foreground leading-tight max-w-[9ch]">Áreas de Foco</p>
+      </div>
+    </div>
+
     <!-- Timeline-->
     <div class="relative pl-[2.64rem] mt-30 max-w-1xl mx-auto">
       <div class="absolute left-2 top-0 bottom-0 w-px bg-border" />

@@ -12,11 +12,11 @@
 
 <template>
   <div class="bg-card border border-border rounded-lg overflow-hidden">
-    <!-- Área da imagem -->
+    
     <div class="relative h-44 bg-muted">
       <img :src="foto" :alt="titulo" class="w-full h-full object-cover" />
 
-      <!-- Badges sobre a imagem -->
+      <!--Status-->
       <div class="absolute bottom-3 left-3 flex flex-wrap gap-2">
         <span
           v-for="tag in tags"
@@ -28,7 +28,6 @@
       </div>
     </div>
 
-    <!-- Conteúdo -->
     <div class="p-4">
       <h3 class="text-lg font-bold text-foreground mb-2">
         {{ titulo }}
