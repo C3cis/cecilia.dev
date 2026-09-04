@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
  @theme {
-  /* Fontes */
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  /* Fontes textos */
+--font-sans: 'Inter', sans-serif;
+--font-serif: 'Playfair Display', serif;
+
+/* Variações */
+--font-mono-alt: 'FreeMono', monospace;
+--font-serif-alt: 'Bookman', 'URW Bookman L', serif;
+
 
   /* Base do site */
   --color-background: var(--background);
@@ -44,22 +49,26 @@
   /* Base */
   --background: #16131F;
   --foreground: #F0D9E4;
+  --medium: #aa7a93;
 
   /* Card */
   --card: #1E1928;
-  --card-foreground: #F0D9E4;
+  --card-foreground: #e1cad5;
 
   /* Primary */
   --primary: #C1A0AC;
   --primary-foreground: #16131F;
+  --primary-medium: #876484;
 
   /* Secondary */
-  --secondary: #806C79;
+  --secondary: #675862;
   --secondary-foreground: #ede6e9;
+  --secondary-medium: #675862;
 
   /* Muted */
-  --muted: #4A3F4B;
+  --muted: #6c3e59;
   --muted-foreground: #C1A0AC;
+  --muted-02: #8f5c6f;
 
   /* Accent */
   --accent: #C1A0AC;

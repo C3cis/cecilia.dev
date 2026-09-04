@@ -12,7 +12,8 @@ const activeTab = ref<SkillTab>('frontend')
       </h3>
 
       <h1 class="max-w-[10ch] text-7xl font-bold mt-8">
-        Full Stack Developer Junior
+        <span class="italic text-primary">Full Stack </span>
+        Developer Junior
       </h1>
 
       <p class="mt-8 mb-10 max-w-[65ch] text-left leading-relaxed border-b-3 border-border pb-8">
@@ -97,10 +98,13 @@ const activeTab = ref<SkillTab>('frontend')
   <section 
   id="trabalhos" 
   class="mb-30">
-    <div class="text-left text-[12px] font-serif ">
-      <h1 class="text-4xl font-bold mt-5">Projetos Pessoais</h1>
-       <p class=" mt-5 max-w-[18ch]"> TRABALHOS EM DESENVOLVIMENTO</p>
-    </div>
+<div class="flex flex-row items-center gap-4 font-serif">
+      <Icon name="bxl:gitlab" class="text-primary text-5xl shrink-0" />
+      <div class="flex flex-col">
+        <span class="text-sm uppercase tracking-wide text-muted-foreground">TRABALHOS EM DESENVOLVIMENTO</span>
+        <h2 class="text-2xl font-bold text-foreground">Projetos Pessoais</h2>
+      </div>
+</div>
 
     <div class="grid grid-cols-3 gap-10 mt-10">
       <CardProjetos
@@ -115,12 +119,35 @@ const activeTab = ref<SkillTab>('frontend')
     </div>
   </section>
   
-  <section
-  id="contato" 
-  class="py-30 bg-foreground ">
-    <div class="text-center text-sm font-serif ">
-      <h1 class="text-4xl font-bold mt-5 text-primary-foreground">Contatinhos</h1>
-    </div>
-  </section>
+  <section class="relative overflow-hidden rounded-3xl px-50 py-20 text-center bg-gradient-to-br from-primary/40 via-muted to-primary/30">
+  <h2 class="font-serif text-3xl md:text-5xl font-bold text-foreground leading-tight px-8">
+    Bora transformar ideia em
+    <span class="italic text-primary">código</span>
+  </h2>
+
+  <p class="mt-6 text-sm text-muted-foreground max-w-xl mx-auto">
+    Estou aberta a oportunidades, freelas e colaborações. Me chama!
+  </p>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+    <a
+      href="mailto:ceciliaponte0124@gmail.com"
+      class="inline-flex items-center gap-2 bg-foreground text-background font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
+    >
+      <Icon name="mdi:email-outline" class="w-5 h-5" />
+      Enviar e-mail
+    </a>
+
+    <a
+      href="https://www.linkedin.com/feed/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 border border-foreground text-foreground font-semibold px-6 py-3 rounded-full hover:bg-foreground/10 transition-colors"
+    >
+      <Icon name="mdi:linkedin" class="w-5 h-5" />
+      LinkedIn
+    </a>
+  </div>
+</section>
 
 </template>

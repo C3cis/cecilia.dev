@@ -1,16 +1,16 @@
 <script setup lang="ts">
 interface Disciplina {
   nome: string
-  nota: number // 0 a 10
+  nota: number 
 }
 
 const props = defineProps<{
-  categoria: string          // "4º SEMESTRE"
-  statusLabel?: string       // "EM ANDAMENTO"
-  titulo: string             // "Bacharelado em Sistemas de Informação"
-  instituicao: string        // "Universidade Federal..."
-  dataInicio: string         // "2023"
-  dataFim?: string           // "2027 (previsto)"
+  categoria: string          
+  statusLabel?: string       
+  titulo: string           
+  instituicao: string        
+  dataInicio: string        
+  dataFim?: string          
   conteudo: string
   disciplinas: Disciplina[]
 }>()
@@ -27,21 +27,20 @@ const props = defineProps<{
           </span>
           <span
             v-if="statusLabel"
-            class="text-xs font-semibold uppercase tracking-wide bg-card-foreground text-muted-foreground px-3 py-1 rounded-full"
+            class="text-xs font-semibold uppercase tracking-wide bg-card-foreground text-secondary px-3 py-1 rounded-full"
           >
             {{ statusLabel }}
           </span>
         </div>
         <div>
         <h3 class="text-2xl font-serif text-black mb-2">{{ titulo }}</h3>
-        <p class="text-muted-foreground mb-1">{{ instituicao }}</p>
-        <p class="text-muted mb-4 text-xs">{{ dataInicio }} — {{ dataFim }}</p>
+        <p class="text-muted-foreground mb-1 italic">{{ instituicao }}</p>
+        <p class="text-muted mb-4 text-xs ">{{ dataInicio }} — {{ dataFim }}</p>
 
         <p class="text-secondary text-sm">{{ conteudo }}</p>
         </div>
       </div>
 
-      <!-- Coluna direita: disciplinas com barra -->
       <div>
         <h4 class="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-4">
           Disciplinas em destaque
@@ -50,11 +49,11 @@ const props = defineProps<{
         <div class="flex flex-col gap-4">
           <div v-for="disciplina in disciplinas" :key="disciplina.nome">
             <div class="flex items-center justify-between mb-1">
-              <span class="text-primary-foreground font-medium text-sm">{{ disciplina.nome }}</span>
+              <span class="text-primary-foreground font-medium text-sm italic">{{ disciplina.nome }}</span>
               <span class="text-sm font-semibold text-primary-foreground">{{ disciplina.nota.toFixed(1) }}</span>
             </div>
 
-            <div class="h-2 w-full rounded-full bg-muted">
+            <div class="h-2 w-full rounded-full bg-muted italic">
               <div
                 class="h-full rounded-full bg-primary transition-all duration-500"
                 :style="{ width: (disciplina.nota / 10) * 100 + '%' }"
