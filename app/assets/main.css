@@ -1,22 +1,21 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
- @theme {
+@theme {
   /* Fontes textos */
---font-sans: 'Inter', sans-serif;
---font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
 
-/* Variações */
---font-mono-alt: 'FreeMono', monospace;
---font-serif-alt: 'Bookman', 'URW Bookman L', serif;
+  /* Variações */
+  --font-mono-alt: 'FreeMono', monospace;
+  --font-serif-alt: 'Bookman', 'URW Bookman L', serif;
 
-
-/* Base */
+  /* Base */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-background-light: var(--background-light);
   --color-background-dark: var(--background-dark);
   --background: var(--background-gradient);
-  --foreground: #F0D9E4;
+  --foreground: #f0d9e4;
   --medium: #aa7a93;
 
   /* Cards */
@@ -56,22 +55,22 @@
 
 :root {
   /* Base */
- --background-dark: #230e18;      
+  --background-dark: #230e18;
   --background-gradient: linear-gradient(
     135deg,
     var(--background-dark) 70%,
     #6b304b 100%,
     rgba(234, 23, 139, 0.311) 100%
   );
-  --background-medium: #620000;   
-  --background-light: #f1d0db;  
+  --background-medium: #620000;
+  --background-light: #f1d0db;
   /* Card */
   --card: #49142936;
   --card-foreground: #e1cad5;
 
   /* Primary */
-  --primary: #C1A0AC;
-  --primary-foreground: #16131F;
+  --primary: #c1a0ac;
+  --primary-foreground: #16131f;
   --primary-medium: #fff5fb;
 
   /* Secondary */
@@ -82,16 +81,16 @@
 
   /* Muted */
   --muted: #773756;
-  --muted-foreground: #C1A0AC;
+  --muted-foreground: #c1a0ac;
   --muted-medium: #ba7991;
 
   /* Accent */
-  --accent: #C1A0AC;
-  --accent-foreground: #16131F;
+  --accent: #c1a0ac;
+  --accent-foreground: #16131f;
 
   /* Borders & focus */
-  --border: #4A3F4B;
-  --ring: #C1A0AC;
+  --border: #4a3f4b;
+  --ring: #c1a0ac;
 
   /* Radius base */
   --radius: 0.5rem;
@@ -111,7 +110,7 @@
 
 .bg-light-soft::before,
 .bg-light-soft::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -119,7 +118,7 @@
   pointer-events: none;
 }
 .bg-light-soft::before {
-  bottom: 100%; 
+  bottom: 100%;
   background: linear-gradient(to top, var(--background-light), transparent);
 }
 .bg-light-soft::after {
@@ -127,12 +126,13 @@
   background: linear-gradient(to bottom, var(--background-light), transparent);
 }
 
-/* Telas grandes: aumenta a base de rem. Como quase tudo no Tailwind usa rem
-   (textos, paddings, gaps, larguras como max-w-5xl), TUDO cresce junto e de
-   forma proporcional — melhora o preenchimento da tela sem redesenhar nada. */
 @media (min-width: 1536px) {
-  html { font-size: 18px; }
+  html {
+    font-size: 18px;
+  }
 }
 @media (min-width: 1920px) {
-  html { font-size: 20px; }
+  html {
+    font-size: 20px;
+  }
 }

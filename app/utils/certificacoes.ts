@@ -1,9 +1,8 @@
 // Tags específicas de certificações — união própria (não reaproveitei as de
 // projetos porque o vocabulário é diferente: Linux, DevOps, Frontend, Nuxt...).
-export type TagCert =
-  | 'TS' | 'JS' | 'Linux' | 'DevOps' | 'Vue.js' | 'Nuxt' | 'Frontend'
+export type TagCert = 'TS' | 'JS' | 'Linux' | 'DevOps' | 'Vue.js' | 'Nuxt' | 'Frontend'
 
-export type Certificacao = {
+export interface Certificacao {
   tags: TagCert[]
   titulo: string
   conteudo: string

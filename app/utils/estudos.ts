@@ -1,5 +1,5 @@
 // O que estou estudando agora — precisa bater com as props do Estudos.vue
-export type Estudo = {
+export interface Estudo {
   categoria: string
   titulo: string
   porcentagem: number

@@ -1,43 +1,39 @@
 <script setup lang="ts">
-const props = defineProps({
-  tags: { type: Array as PropType<string[]>, required: true },
-  titulo: { type: String, required: true },
-  conteudo: { type: String, required: true },
-  plataforma: { type: String, required: true },
-  concluido: { type: Boolean, default: true },
-  dataFeito: { type: String, required: false },
-  horas: { type: String, required: true },
-  linkCertificado: { type: String, required: false },
-})
-
+  const props = defineProps({
+    tags: { type: Array as PropType<string[]>, required: true },
+    titulo: { type: String, required: true },
+    conteudo: { type: String, required: true },
+    plataforma: { type: String, required: true },
+    concluido: { type: Boolean, default: true },
+    dataFeito: { type: String, required: false, default: '' },
+    horas: { type: String, required: true },
+    linkCertificado: { type: String, required: false, default: '' },
+  })
 </script>
 
 <template>
-  <div class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-9 bg-card border border-border rounded-2xl px-7 py-8 hover:border-primary/40 transition-colors">
-   
+  <div
+    class="relative flex flex-col gap-4 rounded-2xl border border-border bg-card px-7 py-8 transition-colors hover:border-primary/40 md:flex-row md:items-center md:gap-9">
     <span
       v-if="!concluido"
-      class="absolute top-0 left-6 -translate-y-1/2 text-[10px] font-semibold uppercase tracking-wide bg-muted text-muted-foreground px-3 py-1 rounded-full border border-border"
-    >
+      class="absolute top-0 left-6 -translate-y-1/2 rounded-full border border-border bg-muted px-3 py-1 text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
       Em andamento
     </span>
 
-    <div class="flex md:w-8 shrink-0">
+    <div class="flex shrink-0 md:w-8">
       <span
         v-if="concluido"
-        class="flex items-center justify-center w-9 h-9 rounded-full border border-primary text-primary shrink-0"
-      >
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary text-primary">
         ✓
       </span>
     </div>
 
-    <div class="flex-1 min-w-0">
-      <div class="flex flex-wrap gap-2 mb-2">
+    <div class="min-w-0 flex-1">
+      <div class="mb-2 flex flex-wrap gap-2">
         <span
           v-for="tag in tags"
           :key="tag"
-          class="text-[9px] font-semibold uppercase tracking-wide bg-muted text-muted-foreground px-3 py-1 rounded-full"
-        >
+          class="rounded-full bg-muted px-3 py-1 text-[9px] font-semibold tracking-wide text-muted-foreground uppercase">
           {{ tag }}
         </span>
       </div>
@@ -46,21 +42,22 @@ const props = defineProps({
         {{ titulo }}
       </h3>
 
-      <p v-if="conteudo" class="text-sm text-muted-foreground mt-1">
+      <p v-if="conteudo" class="mt-1 text-sm text-muted-foreground">
         {{ conteudo }}
       </p>
 
-      <p class="text-muted-foreground mt-1">
+      <p class="mt-1 text-muted-foreground">
         {{ plataforma }}
       </p>
     </div>
 
-    <div class="hidden md:block w-px self-stretch bg-border" />
+    <div class="hidden w-px self-stretch bg-border md:block" />
 
-    <div class="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-1 md:w-40 shrink-0 text-[15px] text-muted-foreground font-serif ">
+    <div
+      class="flex shrink-0 items-center justify-between gap-1 font-serif text-[15px] text-muted-foreground md:w-40 md:flex-col md:items-end md:justify-center">
       <div class="flex items-center gap-2">
-        <span >{{ concluido ? dataFeito : 'Em andamento'}} </span>
-        <span class="text-xl font-sans"> — {{ horas }}</span>
+        <span>{{ concluido ? dataFeito : 'Em andamento' }} </span>
+        <span class="font-sans text-xl"> — {{ horas }}</span>
       </div>
 
       <a
@@ -68,10 +65,9 @@ const props = defineProps({
         :href="linkCertificado"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-1 text-foreground font-medium hover:underline"
-      >
+        class="inline-flex items-center gap-1 font-medium text-foreground hover:underline">
         Ver credencial
-        <Icon name="mdi:open-in-new" class="w-4 h-4" />
+        <Icon name="mdi:open-in-new" class="h-4 w-4" />
       </a>
     </div>
   </div>

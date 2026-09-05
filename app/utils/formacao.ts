@@ -1,10 +1,10 @@
 // Cada disciplina em destaque, com nota de 0 a 10
-export type Disciplina = {
+export interface Disciplina {
   nome: string
   nota: number
 }
 
-export type Formacao = {
+export interface Formacao {
   categoria: string
   statusLabel?: string
   titulo: string
@@ -26,10 +26,10 @@ export const formacao: Formacao[] = [
     conteudo: 'Focando em desenvolvimento de software, banco de dados e arquitetura de sistemas.',
     disciplinas: [
       { nome: 'Algoritmos e Estruturas de Dados', nota: 8.5 },
-      { nome: 'Banco de Dados', nota: 8.0 },
+      { nome: 'Banco de Dados', nota: 8 },
       { nome: 'Desenvolvimento Web', nota: 9.2 },
       { nome: 'Redes de Computadores', nota: 8.7 },
-      { nome: 'Arquitetura Orientada a Serviços', nota: 8.0 },
+      { nome: 'Arquitetura Orientada a Serviços', nota: 8 },
     ],
   },
 ]
