@@ -27,12 +27,13 @@
       </div>
     </div>
 </section>
-<section class="py-10">
+<section class="full-bleed bg-background-light py-16">
+   <div class="mx-auto max-w-5xl px-6">
     <div class="flex flex-row items-center gap-4 font-serif">
-      <Icon name="famicons:school-sharp" class="text-primary text-5xl shrink-0" />
+      <Icon name="famicons:school-sharp" class="text-background-dark text-5xl shrink-0" />
       <div class="flex flex-col">
-        <span class="text-sm uppercase tracking-wide text-muted-foreground">Formação Acadêmica</span>
-        <h2 class="text-2xl font-bold text-foreground">Cursos</h2>
+        <span class="text-sm uppercase tracking-wide text-background-dark/70">Formação Acadêmica</span>
+        <h2 class="text-2xl font-bold text-background-dark">Cursos</h2>
       </div>
     </div>
 
@@ -43,6 +44,7 @@
         v-bind="curso"
       />
     </div>
+   </div>
 </section>
 <section class="py-10">
     <div class="flex flex-row items-center gap-4 font-serif">

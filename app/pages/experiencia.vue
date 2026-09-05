@@ -7,25 +7,25 @@
       <h3 class="w-max border border-primary text-primary rounded-full px-6 py-1 no-underline text-lg">Trajetória</h3>
       
       <h1 class="text-left text-6xl font-bold mt-8">Experiência
-      <span class="italic text-primary">Profissional </span> </h1>
+      <span class="italic text-muted-medium">Profissional </span> </h1>
       
       <p class="mt-8 text-lg text-secondary max-w-[65ch] text-left leading-relaxed">
-        Da monitoria ao estágio em pesquisa científica
+        Entre monitoria, estágio em pesquisa científica e projetos próprios, aprendi a transitar entre back-end, dados e front-end para saber o que acontece em cada processo do sistema.
       </p>
     </div>
 
     <div class="flex flex-row gap-10 mt-10 font-serif">
       <div class="flex items-center gap-3">
-        <span class="text-4xl font-bold text-primary">5</span>
-        <p class="text-sm text-muted-foreground leading-tight max-w-[9ch]">Certificados</p>
+        <span class="text-4xl font-bold text-primary">2</span>
+        <p class="text-sm text-muted-foreground leading-tight max-w-[9ch]">Experiências</p>
       </div>
       <div class="flex items-center gap-3">
-        <span class="text-4xl font-bold text-primary">120H+</span>
-        <p class="text-sm text-muted-foreground leading-tight max-w-[9ch]">de Estudos</p>
+        <span class="text-4xl font-bold text-primary">1</span>
+        <p class="text-sm text-muted-foreground leading-tight max-w-[13ch]">Projetos Reais</p>
       </div>
       <div class="flex items-center gap-3">
-        <span class="text-4xl font-bold text-primary">4</span>
-        <p class="text-sm text-muted-foreground leading-tight max-w-[9ch]">Áreas de Foco</p>
+        <span class="text-4xl font-bold text-primary">1</span>
+        <p class="text-sm text-muted-foreground leading-tight max-w-[13ch]">Ano de Atuação</p>
       </div>
     </div>
 

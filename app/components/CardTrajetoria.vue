@@ -14,7 +14,7 @@ const props = defineProps ({
 
 </script>
     <template>
-  <div class="bg-card border border-border  rounded-2xl p-9 relative">
+  <div class="bg-card border border-border border-t-5 border-t-primary rounded-2xl p-9 relative">
     <div class="flex items-start justify-between mb-2 ">
       <div class="flex gap-2">
         <span class="text-xs font-semibold uppercase tracking-wide bg-primary text-primary-foreground px-3 py-1 rounded-full">

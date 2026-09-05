@@ -11,24 +11,24 @@ export type Projeto = {
 
 export const projetos: Projeto[] = [
   {
-    foto: '/cat.jpg', 
-    tags: ['Vue', 'TS', 'Bun'],
-    titulo: 'Projeto Fictício 1',
-    conteudo: 'Descrição de exemplo. Troque por um resumo curto do que o projeto faz.',
-    linkGit: 'https://github.com/C3cis',
+    foto: '/proj1.jpeg', 
+    tags: ['Gin', 'TS', 'Bun', 'MongoSQL'],
+    titulo: 'Projeto Gestão Administrativa',
+    conteudo: 'Aplicação web desenvolvida na arquitetura MVC para controle e gerenciamento administrativo de equipamentos.',
+    linkGit: 'https://github.com/C3cis/Projeto-Gestao-go'
   },
   {
-    foto: '/cat.jpg',
+    foto: '/proj4.jpeg',
     tags: ['Go', 'Gin', 'MongoSQL'],
-    titulo: 'Projeto Fictício 2',
-    conteudo: 'Descrição de exemplo. Troque por um resumo curto do que o projeto faz.',
-    linkGit: 'https://github.com/C3cis',
+    titulo: 'Site de Portal Empreendedor',
+    conteudo: 'Desenvolvimento web de um portal informativo sobre empreendedorismo, transformação digital e ecossistema de negócios.',
+    linkGit: 'https://github.com/C3cis/site-empreendedorismo',
   },
   {
-    foto: '/cat.jpg',
-    tags: ['React', 'JS', 'TS'],
-    titulo: 'Projeto Fictício 3',
-    conteudo: 'Descrição de exemplo. Troque por um resumo curto do que o projeto faz.',
+    foto: '/proj3.jpeg',
+    tags: ['Vue','TS'],
+    titulo: 'Aplicativo e-commerce',
+    conteudo: 'Desenvolvimento de um aplicativo web de e-commerce, com funcionalidades de carrinho de compras, checkout e integração com API.',
     linkGit: 'https://github.com/C3cis',
   },
 ]

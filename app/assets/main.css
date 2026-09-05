@@ -10,9 +10,14 @@
 --font-serif-alt: 'Bookman', 'URW Bookman L', serif;
 
 
-  /* Base do site */
+/* Base */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-background-light: var(--background-light);
+  --color-background-dark: var(--background-dark);
+  --background: var(--background-gradient);
+  --foreground: #F0D9E4;
+  --medium: #aa7a93;
 
   /* Cards */
   --color-card: var(--card);
@@ -21,14 +26,18 @@
   /* Contraste */
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-medium: var(--primary-medium);
 
   /* Tons de Rosa */
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-medium: var(--secondary-medium);
+  --color-secondary-light: var(--secondary-light);
 
   /* Cores para textos de pouco contraste */
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-muted-medium: var(--muted-medium);
 
   /* Cor para botoes e barras de progresso */
   --color-accent: var(--accent);
@@ -47,28 +56,34 @@
 
 :root {
   /* Base */
-  --background: #16131F;
-  --foreground: #F0D9E4;
-  --medium: #aa7a93;
-
+ --background-dark: #230e18;      
+  --background-gradient: linear-gradient(
+    135deg,
+    var(--background-dark) 70%,
+    #6b304b 100%,
+    rgba(234, 23, 139, 0.311) 100%
+  );
+  --background-medium: #620000;   
+  --background-light: #f1d0db;  
   /* Card */
-  --card: #1E1928;
+  --card: #49142936;
   --card-foreground: #e1cad5;
 
   /* Primary */
   --primary: #C1A0AC;
   --primary-foreground: #16131F;
-  --primary-medium: #876484;
+  --primary-medium: #fff5fb;
 
   /* Secondary */
   --secondary: #675862;
   --secondary-foreground: #ede6e9;
-  --secondary-medium: #675862;
+  --secondary-medium: #e1a3b6;
+  --secondary-light: #f1d0db7e;
 
   /* Muted */
-  --muted: #6c3e59;
+  --muted: #773756;
   --muted-foreground: #C1A0AC;
-  --muted-02: #8f5c6f;
+  --muted-medium: #ba7991;
 
   /* Accent */
   --accent: #C1A0AC;
@@ -80,4 +95,44 @@
 
   /* Radius base */
   --radius: 0.5rem;
+}
+.bg-background-gradient {
+  background-image: var(--background-gradient);
+}
+
+.full-bleed {
+  margin-inline: calc(50% - 50vw);
+}
+
+.bg-light-soft {
+  position: relative;
+  background-color: var(--background-light);
+}
+
+.bg-light-soft::before,
+.bg-light-soft::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2.8rem;
+  pointer-events: none;
+}
+.bg-light-soft::before {
+  bottom: 100%; 
+  background: linear-gradient(to top, var(--background-light), transparent);
+}
+.bg-light-soft::after {
+  top: 100%;
+  background: linear-gradient(to bottom, var(--background-light), transparent);
+}
+
+/* Telas grandes: aumenta a base de rem. Como quase tudo no Tailwind usa rem
+   (textos, paddings, gaps, larguras como max-w-5xl), TUDO cresce junto e de
+   forma proporcional — melhora o preenchimento da tela sem redesenhar nada. */
+@media (min-width: 1536px) {
+  html { font-size: 18px; }
+}
+@media (min-width: 1920px) {
+  html { font-size: 20px; }
 }

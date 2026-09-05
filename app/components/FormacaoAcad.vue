@@ -53,9 +53,9 @@ const props = defineProps<{
               <span class="text-sm font-semibold text-primary-foreground">{{ disciplina.nota.toFixed(1) }}</span>
             </div>
 
-            <div class="h-2 w-full rounded-full bg-muted italic">
+            <div class="h-2 w-full rounded-full talic bg-primary-medium">
               <div
-                class="h-full rounded-full bg-primary transition-all duration-500"
+                class="h-full rounded-full bg-muted-medium transition-all duration-500"
                 :style="{ width: (disciplina.nota / 10) * 100 + '%' }"
               />
             </div>
