@@ -11,9 +11,9 @@ export default defineNuxtConfig({
       deployConfig: true,
       nodeCompat: true,
       wrangler: {
-        name: 'cecilia-dev',
+        name: 'russano-dev',
         workers_dev: false,
-        route: 'cecilia.dev/*',
+        route: 'russano.dev/*',
         observability: { logs: { enabled: true, head_sampling_rate: 1, invocation_logs: true } },
       },
     },
