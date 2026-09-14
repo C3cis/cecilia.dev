@@ -12,7 +12,7 @@
     dataInicio: { type: String, required: true },
     dataFim: { type: String, required: false, default: '' },
     conteudo: { type: String, required: true },
-    disciplinas: { type: Array as PropType<Disciplina[]>, required: true }
+    disciplinas: { type: Array as PropType<Disciplina[]>, required: true },
   })
 </script>
 
@@ -47,8 +47,7 @@
         </h4>
 
         <div class="flex flex-col gap-4">
-          <div v-for="disciplina in disciplinas"
-           :key="disciplina.nome">
+          <div v-for="disciplina in disciplinas" :key="disciplina.nome">
             <div class="mb-1 flex items-center justify-between">
               <span class="text-sm font-medium text-primary-foreground italic">{{
                 disciplina.nome
