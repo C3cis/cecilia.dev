@@ -15,7 +15,7 @@ export default defineNuxtConfig({
         workers_dev: false,
         route: 'russano.dev/*',
         r2_buckets: [{ binding: 'R2', bucket_name: 'russano-dev' }],
-        d1_databases: [{ binding: 'DB', database_name: 'russano-dev' }],
+        d1_databases: [{ binding: 'D1', database_name: 'russano-dev' }],
         observability: { logs: { enabled: true, head_sampling_rate: 1, invocation_logs: true } },
       },
     },
