@@ -4,9 +4,9 @@
     titulo: { type: String, required: true },
     conteudo: { type: String, required: true },
     plataforma: { type: String, required: true },
-    concluido: { type: Boolean, default: true },
+    status: { type: String, default: '' },
     dataFeito: { type: String, required: false, default: '' },
-    horas: { type: String, required: true },
+    horas: { type: Number, required: true },
     linkCertificado: { type: String, required: false, default: '' },
   })
 </script>
@@ -15,18 +15,10 @@
   <div
     class="relative flex flex-col gap-4 rounded-2xl border border-border bg-card px-7 py-8 transition-colors hover:border-primary/40 md:flex-row md:items-center md:gap-9">
     <span
-      v-if="!concluido"
+      v-if="status"
       class="absolute top-0 left-6 -translate-y-1/2 rounded-full border border-border bg-muted px-3 py-1 text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
-      Em andamento
+      {{ status }}
     </span>
-
-    <div class="flex shrink-0 md:w-8">
-      <span
-        v-if="concluido"
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary text-primary">
-        ✓
-      </span>
-    </div>
 
     <div class="min-w-0 flex-1">
       <div class="mb-2 flex flex-wrap gap-2">
@@ -56,12 +48,12 @@
     <div
       class="flex shrink-0 items-center justify-between gap-1 font-serif text-[15px] text-muted-foreground md:w-40 md:flex-col md:items-end md:justify-center">
       <div class="flex items-center gap-2">
-        <span>{{ concluido ? dataFeito : 'Em andamento' }} </span>
+        <span>{{ dataFeito ?? 'Em andamento' }} </span>
         <span class="font-sans text-xl"> — {{ horas }}</span>
       </div>
 
       <a
-        v-if="concluido && linkCertificado"
+        v-if="linkCertificado"
         :href="linkCertificado"
         target="_blank"
         rel="noopener noreferrer"

@@ -1,4 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const { data } = await useFetch('/api/certificados')
+
+  const certificados = computed(() => {
+    if (!data.value) return []
+    return data.value.map((certificado) => ({
+      tags: certificado.tags.split(',').map((tag: string) => tag.trim()),
+      titulo: certificado.nome,
+      conteudo: certificado.descricao,
+      plataforma: certificado.instituicao,
+      status: certificado.status,
+      dataFeito: certificado.data,
+      horas: certificado.horas,
+      linkCertificado: certificado.link,
+    }))
+  })
+</script>
 <template>
   <section id="formacao" class="py-18">
     <div class="text-center font-serif">
@@ -54,7 +70,7 @@
     </div>
 
     <div class="mt-10 flex flex-col gap-4">
-      <Certificacoes v-for="cert in certificacoes" :key="cert.titulo" v-bind="cert" />
+      <Certificacoes v-for="cert in certificados" :key="cert.titulo" v-bind="cert" />
     </div>
   </section>
   <section class="py-10">

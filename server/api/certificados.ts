@@ -1,6 +1,6 @@
 interface Certificados {
   id: number
-  name: string
+  nome: string
   instituicao: string
   data: string
   horas: number
