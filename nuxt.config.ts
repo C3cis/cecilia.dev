@@ -19,6 +19,9 @@ export default defineNuxtConfig({
         observability: { logs: { enabled: true, head_sampling_rate: 1, invocation_logs: true } },
       },
     },
+    imports: {
+      imports: [{ name: 'default', as: 'mime', from: 'mime' }],
+    },
   },
   vite: {
     plugins: [tailwindcss()],
