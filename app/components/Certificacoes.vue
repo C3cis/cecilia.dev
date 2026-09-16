@@ -54,7 +54,7 @@
 
       <a
         v-if="linkCertificado"
-        :href="linkCertificado"
+        :href="`/certificados/${linkCertificado}`"
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-1 font-medium text-foreground hover:underline">
