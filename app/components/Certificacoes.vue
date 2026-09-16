@@ -19,6 +19,13 @@
       class="absolute top-0 left-6 -translate-y-1/2 rounded-full border border-border bg-muted px-3 py-1 text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
       {{ status }}
     </span>
+    
+    <div v-else class="flex shrink-0 md:w-8">
+      <span
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary text-primary">
+        ✓
+      </span>
+    </div>
 
     <div class="min-w-0 flex-1">
       <div class="mb-2 flex flex-wrap gap-2">
